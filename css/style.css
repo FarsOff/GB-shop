@@ -71,7 +71,7 @@ body {
   border: none;
   position: absolute;
   top: 0;
-  right: -165px;
+  left: 34px;
   color: #fff;
   font-size: 16px;  
   
@@ -174,6 +174,10 @@ padding-left: 55px;
 .shopping__buscket{
   position: relative;
 }
+.shopping__buscket:hover .shopping__counter{
+background-color: #fff;
+color: #F16D7F;
+}
 .shopping__counter{
   position: absolute;
   display: block;
@@ -188,6 +192,7 @@ padding-left: 55px;
   right: -5px;
   top: -5px;
 }
+
 .start-page{
   width: 100%;
 }
@@ -349,6 +354,9 @@ text-transform: uppercase;
 }
 .products{
   margin-bottom: 70px;
+}
+.catalog{
+  margin-bottom: 48px;
 }
 .products__list{
   display: flex;
@@ -583,6 +591,7 @@ line-height: 17px;
 opacity: .67;
 color: #222224;
 padding: 7px 22px;
+border: none;
 }
 .subscribe-form{
   display: flex;
@@ -606,6 +615,7 @@ padding: 7px;
 border-radius: 0 50px 50px 0;
 color: #fff;
 background: #F16D7F;
+border: none;
 }
 .subscribe-btn:hover{
   background: #E05C6E; 
@@ -662,31 +672,86 @@ background: #F16D7F;
 }
 
 .catalog-page{
-  width: 100%;
+  width: 100%;  
 }
 .catalog__top{
   width: 100%;
-  min-height: 148px;
-  background: #F8F3F4;
-
+background-color: #F8F3F4;
 }
-.catalog__top-heading{
-  padding: 60px;
+.catalog__nav{
+  width: 100%;
+  height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+.catalog__top-title{
   font-size: 24px;
   line-height: 29px;
+  font-weight: 400;
   color: #F16D7F;
-}
-.catalog__top-links{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.breadcrambs{
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 300;
-  color: #636363;
-  text-decoration: none;
   text-transform: uppercase;
 }
-/*# sourceMappingURL=style.css.map */
+.bradcrambs{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.breadcrambs-link{
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #636363;
+}
+.active{
+  color: #F16D7F;
+}
+.breadcrambs-link:visited{
+  color: #636363;
+}
+.breadcrambs-link:hover{
+  color: #E05C6E;
+}
+.pagination{
+  margin: 0 auto;
+  width: 284px;
+  height: 44px;
+  border: 1px solid #EBEBEB;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  margin-bottom: 96px;
+}
+.pagination-arrow{
+  fill: #000;
+  margin: 0 8px;
+}
+.pagination-arrow:hover{
+  fill: #E05C6E;
+}
+.page-number{
+  text-decoration: none;
+  color: #C4C4C4;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin: 0 8px;
+}
+.page-space{
+  text-decoration: none;
+  color: #C4C4C4;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin: 0 8px;
+}
+.page-number:hover{
+  color: #E05C6E;
+}
+.page-number:focus {
+  color: #F16D7F;
+  font-weight: 700;
+}
+/*# so
+urceMappingURL=style.css.map */
