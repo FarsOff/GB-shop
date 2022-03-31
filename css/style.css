@@ -12,6 +12,7 @@ body {
 }
 
 .header {
+  position: relative;
   width: 100%;
   background-color: #222222;
   height: 75px;
@@ -88,6 +89,83 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#menu-switch{
+  visibility: hidden;
+}
+#menu-switch:checked ~.menu-list{
+  visibility: visible;
+}
+.menu-list{
+  position: absolute;
+  right: 0;
+  top: 75px;
+  visibility: hidden;
+  list-style-type: none;
+  background-color: #fff;
+  width: 100%;
+  max-width: 232px;
+  min-height: 764px;
+  padding-top: 37px;  
+}
+.menu-list-close-btn{
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: -16px;
+  left: 205px;
+  fill: #6F6E6E;
+}
+.menu-list-close-btn:hover{
+  fill: #000;
+}
+
+.menu-list-title{
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 34px;
+  
+}
+.menu-list-item{
+  margin-top: 20px;
+}
+.menu-list-item-link{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #F16D7F;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  padding-left: 34px;   
+}
+.menu-list-item-link:hover{
+  color: #E05C6E;
+  font-weight: 700;
+}
+.menu-sublist{
+  list-style-type: none;
+  margin-top: 12px;
+  
+}
+.menu-sublist-item{
+  margin-bottom: 11px;
+}
+.menu-sublist-item-link{
+text-decoration: none;
+text-transform: capitalize;
+color: #6F6E6E;
+font-size: 14px;
+line-height: 17px;
+font-weight: 400;
+padding-left: 55px;
+}
+.menu-sublist-item-link:hover{
+  color: #000;
+  font-weight: 700;
 }
 .link {
   margin-left: 35px;
