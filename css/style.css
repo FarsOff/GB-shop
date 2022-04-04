@@ -734,6 +734,7 @@ background-color: #F8F3F4;
 
 /* FILTER-SORT */
 .filter-sort{
+  box-sizing: border-box;
   width: 100%;
   margin-top: 39px;
 }
@@ -778,6 +779,7 @@ background-color: #F8F3F4;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  
 }
 
 .filter-title svg{
@@ -805,6 +807,9 @@ summary {
   text-transform: uppercase;
   cursor: pointer;  
 }
+.filter-subtitle{
+  border-bottom: 1px solid #EBEBEB;
+}
 .filter-subtitle::before{
   content: '';
   display: block;
@@ -816,19 +821,22 @@ summary {
   left: 0;
 }
 
+.filter-subtitle:hover{
+  border-bottom: 1px solid #EF5B70;
+  width: 243px;
+}
 summary:hover {
   color: #EF5B70;
+}
+.filter-subtitle:focus {
+  border-bottom: 1px solid #EF5B70;
+  width: 243px;
 }
 
 summary:focus {
   color: #EF5B70;
 }
 
-.summary-hr{
-  margin-top: 11px;
-  height: 1px;
-  color: #EBEBEB;
-}
 
 .filter__body {
   padding: 43px 16px 16px;
@@ -1017,6 +1025,339 @@ details:not(:last-child) {
 }
 .product-page{
   margin: 126px auto;
+}
+
+/* SORTING */
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #F16D7F;
+}
+/* SORTING_TREND */
+.sorting-trend {
+  width: 132px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  margin-right: 28px;
+}
+
+.sorting-trend-btn-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.sorting-trend-btn-title svg {
+  fill: #6F6E6E;
+  position: absolute;
+  top: 40%;
+  left: 100%;
+}
+
+.sorting-trend-btn-title:hover {
+  color: #F16D7F;
+}
+
+.sorting-trend-btn-title:hover svg {
+  fill: currentColor;
+}
+
+.sorting-trend-btn-title:active {
+  color: black;
+}
+
+.sorting-trend-btn-title:active svg {
+  fill: currentColor;
+}
+
+#switch-brand {
+  display: none;
+}
+
+#switch-brand:checked~.sorting-trend-wrp {
+  display: flex;
+}
+
+.sorting-trend-wrp {
+  width: 132px;
+  display: none;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+  padding: 9.5px 9.5px 9.5px 31px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+}
+
+.sorting-trend-item {
+  display: none;
+}
+
+.sorting-trend-item:nth-child(1):checked~.sorting-trend-item-title:nth-child(2)::before,
+.sorting-trend-item:nth-child(3):checked~.sorting-trend-item-title:nth-child(4)::before,
+.sorting-trend-item:nth-child(5):checked~.sorting-trend-item-title:nth-child(6)::before,
+.sorting-trend-item:nth-child(7):checked~.sorting-trend-item-title:nth-child(8)::before {
+  background-image: url('../img/сheck-mark.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sorting-trend-item-title {
+  display: block;
+  margin: 0 0 6px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #6F6E6E;
+}
+
+.sorting-trend-item-title::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1px;
+  left: -23.5px;
+}
+/* SORTING_SIZE */
+.sorting-size {
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.sorting-size-btn-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.sorting-size-btn-title svg {
+  fill: #6F6E6E;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
+.sorting-size-btn-title:hover {
+  color: #F16D7F;
+}
+
+.sorting-size-btn-title:hover svg {
+  fill: currentColor;
+}
+
+.sorting-size-btn-title:active {
+  color: black;
+}
+
+.sorting-size-btn-title:active svg {
+  fill: currentColor;
+}
+
+#switch-size {
+  display: none;
+}
+
+#switch-size:checked~.sorting-size-wrp {
+  display: flex;
+}
+
+.sorting-size-wrp {
+  width: 80px;
+  display: none;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+  padding: 9.5px 9.5px 9.5px 31px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+}
+
+.sorting-size-item {
+  display: none;
+}
+
+.sorting-size-item:nth-child(1):checked~.sorting-size-item-title:nth-child(2)::before,
+.sorting-size-item:nth-child(3):checked~.sorting-size-item-title:nth-child(4)::before,
+.sorting-size-item:nth-child(5):checked~.sorting-size-item-title:nth-child(6)::before,
+.sorting-size-item:nth-child(7):checked~.sorting-size-item-title:nth-child(8)::before {
+  background-image: url('../img/сheck-mark.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sorting-size-item-title {
+  display: block;
+  margin: 0 0 6px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #6F6E6E;
+}
+
+.sorting-size-item-title::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1px;
+  left: -23.5px;
+}
+/* SORTING_PRICE */
+.sorting-price {
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.sorting-price-btn-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.sorting-price-btn-title svg {
+  fill: #6F6E6E;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
+.sorting-price-btn-title:hover {
+  color: #F16D7F;
+}
+
+.sorting-price-btn-title:hover svg {
+  fill: currentColor;
+}
+
+.sorting-price-btn-title:active {
+  color: black;
+}
+
+.sorting-price-btn-title:active svg {
+  fill: currentColor;
+}
+
+#switch-price {
+  display: none;
+}
+
+#switch-price:checked~.sorting-price-wrp {
+  display: flex;
+}
+
+.sorting-price-wrp {
+  width: 100px;
+  display: none;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+  padding: 9.5px 9.5px 9.5px 31px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+}
+
+.sorting-price-item {
+  display: none;
+}
+
+.sorting-price-item:nth-child(1):checked~.sorting-price-item-title:nth-child(2)::before,
+.sorting-price-item:nth-child(3):checked~.sorting-price-item-title:nth-child(4)::before,
+.sorting-price-item:nth-child(5):checked~.sorting-price-item-title:nth-child(6)::before,
+.sorting-price-item:nth-child(7):checked~.sorting-price-item-title:nth-child(8)::before {
+  background-image: url('../img/сheck-mark.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sorting-price-item-title {
+  display: block;
+  margin: 0 0 6px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #6F6E6E;
+}
+
+.sorting-price-item-title::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1px;
+  left: -23.5px;
 }
 /*# so
 urceMappingURL=style.css.map */
