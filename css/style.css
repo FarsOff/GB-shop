@@ -1385,10 +1385,21 @@ button:focus-visible {
 .cart{
   padding-top: 59px;
 }
+.cart__page-content{
+  display: flex;
+}
 .cart__page-card{
   display: flex;
   justify-content: start;
 }
-
+.adress{
+  display: flex;
+  flex-direction: column;
+}
+.card__total{
+  width: 360px;
+  height: 214px;
+  background-color: #F5F3F3;
+}
 /*# so
 urceMappingURL=style.css.map */
