@@ -1419,7 +1419,7 @@ button:focus-visible {
   color: #EF5B70;
   margin-bottom: 65px;
 }
-.products-describtin-line{
+.products-describtion-line{
   background-color: #EAEAEA;
   width: 641px;
   height: 1px;
@@ -1447,11 +1447,329 @@ button:focus-visible {
   margin: 126px auto;
 }
 
-.sorting-product{
+
+/* SORTING-PRODUCT */
+.sorting-product {
   display: flex;
   justify-content: center;
+  margin-bottom: 48px;
 }
 
+.sorting-product-form {
+  position: relative;
+  width: 120px;
+  margin-right: 30px;
+}
+
+/* SORTING-COLOR */
+.sorting-color-btn-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform .2s;
+}
+.sorting-color-btn-title svg{
+  fill: #6F6E6E;
+  position: absolute;
+  top: 40%;
+  left: 100%;
+}
+
+.sorting-color-btn-title:hover {
+  color: #F16D7F;
+  transform: scale(1.1);
+}
+.sorting-color-btn-title:hover svg{
+fill: currentColor;
+transform: scale(1.1);
+}
+
+.sorting-color-btn-title:active {
+  color: black;
+}
+.sorting-color-btn-title:active svg{
+  fill: currentColor;
+}
+#switch-product-color {
+  display: none;
+}
+
+#switch-product-color:checked~.sorting-product-wrp {
+  display: flex;
+}
+
+.sorting-product-wrp {
+  width: 150px;
+  display: none;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+  padding: 9.5px 9.5px 9.5px 31px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+}
+
+.sorting-product-item {
+  display: none;
+}
+
+.sorting-product-item:nth-child(1):checked~.sorting-product-item-title:nth-child(2)::before,
+.sorting-product-item:nth-child(3):checked~.sorting-product-item-title:nth-child(4)::before,
+.sorting-product-item:nth-child(5):checked~.sorting-product-item-title:nth-child(6)::before,
+.sorting-product-item:nth-child(7):checked~.sorting-product-item-title:nth-child(8)::before {
+  background-image: url('../img/сheck-mark.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sorting-product-item-title {
+  display: block;
+  margin: 0 0 6px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #6F6E6E;
+}
+
+.sorting-product-item-title::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1px;
+  left: -23.5px;
+}
+
+/* SORTING-SIZE */
+.sorting-size-btn-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform .2s;
+}
+
+.sorting-size-btn-title svg {
+  fill: #6F6E6E;
+  position: absolute;
+  top: 40%;
+  left: 90%;
+}
+
+.sorting-size-btn-title:hover {
+  color: #F16D7F;
+  transform: scale(1.1);
+}
+
+.sorting-size-btn-title:hover svg {
+  fill: currentColor;
+  transform: scale(1.1);
+}
+
+.sorting-size-btn-title:active {
+  color: black;
+}
+
+.sorting-size-btn-title:active svg {
+  fill: currentColor;
+}
+
+#switch-product-size {
+  display: none;
+}
+
+#switch-product-size:checked~.sorting-product-wrp {
+  display: flex;
+}
+
+.sorting-product-wrp {
+  width: 150px;
+  display: none;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+  padding: 9.5px 9.5px 9.5px 31px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+}
+
+.sorting-product-item {
+  display: none;
+}
+
+.sorting-product-item:nth-child(1):checked~.sorting-product-item-title:nth-child(2)::before,
+.sorting-product-item:nth-child(3):checked~.sorting-product-item-title:nth-child(4)::before,
+.sorting-product-item:nth-child(5):checked~.sorting-product-item-title:nth-child(6)::before,
+.sorting-product-item:nth-child(7):checked~.sorting-product-item-title:nth-child(8)::before {
+  background-image: url('../img/сheck-mark.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sorting-product-item-title {
+  display: block;
+  margin: 0 0 6px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #6F6E6E;
+}
+
+.sorting-product-item-title::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1px;
+  left: -23.5px;
+}
+
+/* SORTING-QUANTITY */
+.sorting-quantity-btn-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #6F6E6E;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform .2s;
+}
+
+.sorting-quantity-btn-title svg {
+  fill: #6F6E6E;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+}
+
+.sorting-quantity-btn-title:hover {
+  color: #F16D7F;
+  transform: scale(1.1);
+}
+
+.sorting-quantity-btn-title:hover svg {
+  fill: currentColor;
+  transform: scale(1.1);
+}
+
+.sorting-quantity-btn-title:active {
+  color: black;
+}
+
+.sorting-quantity-btn-title:active svg {
+  fill: currentColor;
+}
+
+#switch-product-quantity {
+  display: none;
+}
+
+#switch-product-quantity:checked~.sorting-product-wrp {
+  display: flex;
+}
+
+.sorting-product-wrp {
+  width: 150px;
+  display: none;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+  padding: 9.5px 9.5px 9.5px 31px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+}
+
+.sorting-product-item {
+  display: none;
+}
+
+.sorting-product-item:nth-child(1):checked~.sorting-product-item-title:nth-child(2)::before,
+.sorting-product-item:nth-child(3):checked~.sorting-product-item-title:nth-child(4)::before,
+.sorting-product-item:nth-child(5):checked~.sorting-product-item-title:nth-child(6)::before,
+.sorting-product-item:nth-child(7):checked~.sorting-product-item-title:nth-child(8)::before {
+  background-image: url('../img/сheck-mark.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sorting-product-item-title {
+  display: block;
+  margin: 0 0 6px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #6F6E6E;
+}
+
+.sorting-product-item-title::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: 1px;
+  left: -23.5px;
+}
+
+/* CART */
 .cart-top{
  background-color: #F8F3F4;
  min-height: 148px;
