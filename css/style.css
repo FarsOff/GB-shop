@@ -63,13 +63,11 @@ body {
   align-items: center;
 }
 
-.search-icon-form {
-  
+.search-icon-form {  
   width: 30px;
   height: 30px;
   margin-left: 35px;
   position: relative;
-
 } 
 
 
@@ -114,7 +112,7 @@ body {
 }
 #menu-switch:checked ~.menu-list{
   visibility: visible;
-  
+    
 }
 .menu-list{
   position: absolute;
@@ -127,8 +125,7 @@ body {
   max-width: 232px;
   min-height: 764px;
   padding-top: 37px; 
-  z-index: 2; 
-  
+  z-index: 2;  
 }
 .menu-list-close-btn{
   display: block;
@@ -752,6 +749,9 @@ background-color: #F8F3F4;
 .breadcrumbs li:hover{
   transform: scale(1.2);  
 }
+.breadcrumbs li:hover:last-child{
+transform: none;
+}
 
 .breadcrumbs-link{
   font-size: 14px;
@@ -776,6 +776,9 @@ background-color: #F8F3F4;
   box-sizing: border-box;
   width: 100%;
   margin-top: 39px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
 }
 .filter-link {
   text-decoration: none;
@@ -790,12 +793,6 @@ background-color: #F8F3F4;
 
 .filter-link:hover {
   color: #EF5B70;
-}
-
-.catalog-filter-wrp {
-  margin-bottom: 64px;
-  display: flex;
-  width: 100%;
 }
 
 .filter-button {
@@ -847,10 +844,10 @@ summary {
   color: #6F6E6E;
   text-transform: uppercase;
   cursor: pointer;
+  
 }
 .filter-subtitle{
   border-bottom: 1px solid #EBEBEB;
-  transition: color .2s;
 }
 .filter-subtitle::before{
   content: '';
@@ -863,10 +860,18 @@ summary {
   left: 0;
 }
 
+@keyframes filter-sub-hover{
+  from {
+    width: 0;
+  }
+  to {
+    width: 243px;
+  }
+}
 .filter-subtitle:hover{
   border-bottom: 1px solid #EF5B70;
   width: 243px;
-  transition: border-bottom .2s;
+  animation: filter-sub-hover 1 .3s ease;
 }
 summary:hover {
   color: #EF5B70;
@@ -1415,8 +1420,10 @@ button:focus-visible {
   margin-bottom: 65px;
 }
 .products-describtin-line{
-  color: #EAEAEA;
+  background-color: #EAEAEA;
   width: 641px;
+  height: 1px;
+  border: none;
   margin-bottom: 65px;
 }
 .products-btn svg{
@@ -1477,9 +1484,11 @@ margin-bottom: 72px;
   width: 652px;
   max-height: 306px; 
   box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
-  margin-bottom: 40px;
-  
-  
+  margin-bottom: 40px; 
+}
+.cart__page-card:hover{
+  transform: rotate(360deg);
+  transition: transform 1s;
 }
 .cart__page-card-img{
   width: 50%;
@@ -1497,20 +1506,18 @@ margin-bottom: 72px;
   line-height: 29px;
   max-width: 262px;
   color: #222222;
+  list-style-type: none;
 }
 .cart__page-card-describe{
   max-width: 262px;
-  max-height: 222px;
-  
-  
+  max-height: 222px; 
 }
 .cart__page-card-describe-info{
   list-style-type: none;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
-  line-height: 26px;
-  
+  line-height: 26px;  
   color: #575757;  
 }
 .cart__page-btns{
@@ -1530,6 +1537,7 @@ margin-bottom: 72px;
   background-color: transparent;
   border: 1px solid #A4A4A4; 
   cursor: pointer;
+  transition: color .2s;
 }
 .cart__page-btn:hover{
   background-color: #575757;
@@ -1570,6 +1578,11 @@ color: #fff;
   border: 1px solid #A4A4A4;
   padding-left: 17px;
   background-color:transparent;
+  cursor: pointer;
+  transition: transform .2s;  
+}
+.adress-input:hover{
+  transform: scale(1.1);
 }
 .adress-btn{
   width: 101px;
@@ -1581,6 +1594,7 @@ color: #fff;
   color: #4A4A4A;
   border: 1px solid #A4A4A4;
   cursor: pointer;
+  transition: color .2s;
   
 }
 .adress-btn:hover{
@@ -1616,10 +1630,19 @@ color: #fff;
   color: #222222;
   text-transform: uppercase;
   margin-right: 37px;
-  margin-bottom: 39px;
+  margin-bottom: 21px;
 }
 .total span{
   color: #F16D7F;
+}
+.grand-total-line{
+  width: 275px;
+  height: 1px;
+  background-color: #E2E2E2;
+  margin-bottom: 17px;
+  margin-left: 44px;
+  margin-right: 43px;
+  border: none; 
 }
 .checkout-btn{
   width: 273px;
@@ -1633,12 +1656,162 @@ color: #fff;
   background-color: #F16D7F;
   border: none;
   cursor: pointer;
+  transition: color .2s;
 
 }
 .checkout-btn:hover{
   background-color: transparent;
   color: #F16D7F;
   border: 1px solid #F16D7F;
+}
+
+/* REGISTRATION */
+.reg{
+ padding-top: 59px;
+}
+.registration{
+  display: flex;
+  justify-content: space-between;
+}
+.registration-input{
+  width: 33.3333%;
+  max-width: 360px;  
+  
+}
+.registration-input-form-title input{
+  transition: transform .2s;
+  cursor: pointer;
+}
+.registration-input-form-title input:hover{
+  transform: scale(1.1);
+}
+  
+.registration-input-title{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+.registration-input-form-title{
+  list-style-type: none;
+ margin-bottom: 30px;  
+}
+.registration-txt{
+  margin-bottom: 20px;
+  border: 1px solid #A4A4A4;
+  width: 360px;
+  height: 45px;
+  padding-left: 17px;
+}
+.registration-gender{
+  margin-bottom: 30px;  
+}
+
+.registration-gender input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  outline: none;
+  margin-right: 5px;
+  
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+}
+.registration-gender input:checked {
+  border: 6px solid #F16D7F;
+}
+.registration-gender label{
+  margin-right: 20px;
+}
+.registration-gender label{
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+.registration-input-field-title{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+.registration-input-field input{
+  transition: transform .2s;
+  cursor: pointer;
+}
+.registration-input-field input:hover{
+  transform: scale(1.1);
+}
+.registration-field-txt{
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;  
+  color: #B1B1B1;
+  max-width: 360px;
+  margin-bottom: 40px;
+}
+.registration-btn{
+  display: block;
+  min-width: 167px;
+  height: 50px;
+  background-color: #F16D7F;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  transition: background-color .2s;
+  margin-bottom: 96px;
+}
+.registration-btn svg{
+  fill: #FFF;
+  width: 17px;
+  height: 10px;
+  margin-left: 20px;
+}
+.registration-btn:hover{
+  background-color: #D73C3C;
+}
+.registration-information {
+  width: 66.666%;
+  max-width: 662px;
+  margin-left: 128px;
+}
+.registration-information-title{
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+color: #000000;
+margin-bottom: 22px;}
+.registration-information-describe{
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 21px;
+}
+.registration-information-list{
+  list-style-type: none;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;  
+  color: #000000;   
+}
+.registration-information-list li{
+  margin-bottom: 16px;
+}
+
+.registration-information-list ::before {
+  content: url(../img/registration-mark.svg);
+  margin-right: 23px;
 }
 /*# so
 urceMappingURL=style.css.map */
