@@ -105,7 +105,7 @@ body {
   visibility: hidden;
 }
 #menu-switch:checked ~.menu-list{
-  visibility: visible;    
+  visibility: visible;   
 }
 .menu-list{
   position: absolute;
@@ -1726,6 +1726,11 @@ margin-bottom: 72px;
   line-height: 26px;  
   color: #575757;  
 }
+.quantity-amount{ 
+  outline: 1px solid #EAEAEA;  
+  margin-left: 24px;
+  padding: 2px 16px;
+}
 .cart__page-btns{
   display: flex;
   justify-content: space-between;
@@ -1953,6 +1958,7 @@ color: #fff;
   line-height: 16px;  
   color: #B1B1B1;
   max-width: 360px;
+  height: 32px;
   margin-bottom: 40px;
 }
 .registration-btn{
@@ -1994,19 +2000,17 @@ margin-bottom: 22px;}
   margin-bottom: 21px;
 }
 .registration-information-list{
-  list-style-type: none;
+  list-style-image: url(../img/registration-mark.svg);
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;  
-  color: #000000;   
+  color: #000000;  
+  margin-left: 28px; 
 }
 .registration-information-list li{
   margin-bottom: 16px;
 }
-.registration-information-list ::before {
-  content: url(../img/registration-mark.svg);
-  margin-right: 23px;
-}
+
 
 @media (max-width: 768px){
   .container{
